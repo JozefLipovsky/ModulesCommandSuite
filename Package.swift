@@ -7,15 +7,15 @@ let package = Package(
     name: "ModulesCommandSuite",
     products: [
         .plugin(
-            name: "ModulesCommandSuite",
-            targets: ["ModulesCommandSuite"]
+            name: "AddModule",
+            targets: ["AddModule"]
         )
     ],
     targets: [
         .plugin(
-            name: "ModulesCommandSuite",
+            name: "AddModule",
             capability: .command(
-                intent: .custom(verb: "ModulesCommandSuite", description: "Test test..."),
+                intent: .custom(verb: "add-module", description: "Test test..."),
                 permissions: [.writeToPackageDirectory(reason: "Update Package.swift and adds basic folders and files structure when adding new modules")]
             )
         )
